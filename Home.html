@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <style>
+  .grid-container {
+   display: grid;
+   grid-template-columns: auto auto auto auto;}
+
+   .grid-item { background-color: #F3C17C;}
+
+   body {background-color: white;}
+   table, td {border: 1px solid #ffffff;}
+   td {padding: 10px;}	
+   <!--
+    .back {background-color: #08960A;}
+	.rightside {background-color: #CD9834;}
+    .front {background-color: #3364FB;}
+	.leftside {background-color: #BC0B00;}
+	.top {background-color: #FFFB03;}
+	.bottom {background-color: #FFFDFF;}
+    -->
+  </style>
+  
+
+  
+</head>
+<body>
+
+
+<!-- Program-->
+<h2>HTML Table</h2>
+<div class="grid-container">
+  <div class="grid-item">
+ 1
+  </div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">
+   <table>
+    <tr >
+     <td class="top">  </td>
+     <td class="top">  </td>
+     <td class="top">  </td>
+    </tr>
+    <tr >
+     <td class="top">  </td>
+     <td class="top">  </td>
+     <td class="top">  </td>
+    </tr> 
+    <tr >
+     <td class="top">  </td>
+     <td class="top">  </td>
+     <td class="top">  </td>
+    </tr>
+   </table> 
+  </div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">
+   <table>
+    <tr >
+     <td class="back">  </td>
+     <td class="back">   </td>
+     <td class="back">  </td>
+    </tr> 
+    <tr >
+     <td class="back">  </td>
+     <td class="back">   </td>
+     <td class="back">  </td>
+    </tr> 
+    <tr >
+     <td class="back">  </td>
+     <td class="back">   </td>
+     <td class="back">  </td>
+    </tr>
+   </table> 
+  </div>
+  <div class="grid-item">
+   <table>
+    <tr >
+     <td class="rightside">  </td>
+     <td class="rightside">   </td>
+     <td class="rightside">  </td>
+    </tr> 
+    <tr >
+     <td class="rightside">  </td>
+     <td class="rightside">   </td>
+     <td class="rightside">  </td>
+    </tr>
+    <tr >
+     <td class="rightside">  </td>
+     <td class="rightside">   </td>
+     <td class="rightside">  </td>
+    </tr>
+   </table>
+  </div>  
+  <div class="grid-item">
+   <table>
+    <tr >
+     <td class="front">  </td>
+     <td class="front">   </td>
+     <td class="front">  </td>
+    </tr>
+    <tr >
+     <td class="front">  </td>
+     <td class="front">   </td>
+     <td class="front">  </td>
+    </tr>
+    <tr >
+     <td class="front">  </td>
+     <td class="front">   </td>
+     <td class="front">  </td>
+    </tr> 
+   </table>
+  </div>
+  <div class="grid-item">
+   <table>
+    <tr >
+     <td class="leftside">  </td>
+     <td class="leftside">   </td>
+     <td class="leftside">  </td>
+    </tr>
+    <tr >
+     <td class="leftside">  </td>
+     <td class="leftside">   </td>
+     <td class="leftside">  </td>
+    </tr>  
+    <tr >
+     <td class="leftside">  </td>
+     <td class="leftside">   </td>
+     <td class="leftside">  </td>
+    </tr>  
+   </table>
+  </div>
+  <div class="grid-item">9</div>  
+  <div class="grid-item">10</div> 
+  <div class="grid-item">
+   <table>
+    <tr >
+     <td class="bottom">  </td>
+     <td class="bottom">   </td>
+     <td class="bottom">  </td>
+    </tr>
+    <tr >
+     <td class="bottom">  </td>
+     <td class="bottom">   </td>
+     <td class="bottom">  </td>
+    </tr>
+    <tr >
+     <td class="bottom">  </td>
+     <td class="bottom">   </td>
+     <td class="bottom">  </td>
+    </tr> 
+   </table>
+  </div> 
+  <div class="grid-item">
+ <table id="demo"></table>
+  </div> 
+</div>
+
+  
+ 
+
+ 
+
+
+<script>
+var colorSquare = ["#08960A", "#CD9834", "#3364FB", "#BC0B00", "#FFFB03", "#FFFDFF"];
+var classSquare = [".back", ".rightside", ".front", ".leftside", ".top", ".bottom"];
+
+$(document).ready(function(){
+
+for (i=0; i < colorSquare.length; i++){ 
+   
+   $(classSquare[i]).css("background-color", colorSquare[i]);
+ }
+});
+  
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
