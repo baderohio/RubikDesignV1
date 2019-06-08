@@ -22,8 +22,11 @@ for (i=0; i < colorFace.length; i++){
 function myFunction() {
  
   //Define variables and array
-  var i, j, temp, matrixDimension, text;
+  var i, j, k, temp, matrixDimension, text;
   var arr =[];
+  var cL = ["ba", "ri","fr","le","to","bo"];
+  var fL = ["back", "rightside","front","leftside", "top", "bottom"];
+  var colorFace = ["#08960A", "#CD9834", "#3364FB", "#BC0B00", "#FFFB03", "#FFFDFF"];
   
   // Get the value of the input field with id="numb"
   matrixDimension = document.getElementById("numb").value;
@@ -35,20 +38,28 @@ function myFunction() {
     text = "Input OK";
   }
   document.getElementById("demo").innerHTML = text;
-   
+  
+  // 
+
+  for (k=0; k< 6; k++) {
   // put class and id arribute for each faces cell
   for (j = 0; j < matrixDimension; j++) {
    text = "<tr>";
    for (i = 0; i < matrixDimension; i++) {
-     text += "<td class="+"back"+" id="+((j+1)*10+(i+1))+">"+" "+"</td>";}
+     //text += "<td class="+"back"+" id="+((j+1)*10+(i+1))+">"+" "+"</td>";
+	 text += "<td class="+"back"+" id="+cL[k]+((j+1)*10+(i+1))+">"+" "+"</td>";
+	 }
      text  += "</tr>";
      arr[j] = text;}
     
 	// create cells in face (table) choose by id attributes
-	document.getElementById("back").innerHTML = arr[0];
+	document.getElementById(fL[k]).innerHTML = arr[0];
     for (j = 1; j < matrixDimension; j++){
-     $("#back").append(arr[j]);}
+     $("#"+fL[k]).append(arr[j]);}
+               }
 
+
+for (k=0; k< 6; k++) {	
     // put color for each cell j is row and i is cols of matrix first cell is 0,0
    for (j = 0; j < matrixDimension; j++) {
       for (i = 0; i < matrixDimension; i++) {
@@ -61,8 +72,9 @@ function myFunction() {
                else    {
             $("#"+ temp).css("background-color", "#08960A"); // give green color for other cells
                      } */
-					 $("#"+ temp).css("background-color", "#08960A"); // give green color for other cells
+					 $("#"+cL[k]+temp).css("background-color", colorFace[k]); // give green color for other cells
                                             } 
                                         }
 										
-                              }
+                         }
+}   
