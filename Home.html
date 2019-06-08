@@ -1,3 +1,12 @@
+<!--
+/*
+* Programmer : Dr.-Ing. Bader Juma
+* Date       : 
+* File       :
+* Purpose    :
+*/
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -118,6 +127,9 @@
    </table>
   </div>
   <div class="grid-item">
+ <!-- 
+  <table id="leftside"></table>
+  -->
    <table>
     <tr >
      <td class="leftside">  </td>
@@ -135,6 +147,7 @@
      <td class="leftside">  </td>
     </tr>  
    </table>
+    
   </div>
   <div class="grid-item">9</div>  
   <div class="grid-item">10</div> 
@@ -156,103 +169,14 @@
      <td class="bottom">  </td>
     </tr> 
    </table>
+ 
   </div> 
   <div class="grid-item">
  
   </div> 
 </div>
 
-  
-<script>
-
- 
-// gives color to the square 
-var colorSquare = ["#08960A", "#CD9834", "#3364FB", "#BC0B00", "#FFFB03", "#FFFDFF"];
-var classSquare = [".back", ".rightside", ".front", ".leftside", ".top", ".bottom"];
-
-$(document).ready(function(){
-
-for (i=0; i < colorSquare.length; i++){ 
-   
-   $(classSquare[i]).css("background-color", colorSquare[i]);
- }
- });
-
-
-function myFunction() {
- 
-  var x, text;
-  x;
- 
-  // Get the value of the input field with id="numb"
-  x = document.getElementById("numb").value;
-
-  // If x is Not a Number or less than one or greater than 10
-  if (isNaN(x) || x < 1 || x > 10) {
-    text = "Input not valid";
-  } else {
-    text = "Input OK";
-  }
-  document.getElementById("demo").innerHTML = text;
-   /////
- 
-var fruits, text, fLen, i, j, arr =[],k, temp;
-/
-fruits = ["Banana", "Orange", "Apple", "Mango","tt"];
-
-
-fLen = document.getElementById("numb").value;
-
-k=0;
-for (j = 0; j < fLen; j++) {
-
-text = "<tr>";
-for (i = 0; i < fLen; i++) {
-k=k+1;
-
-  
-  text += "<td class="+"back"+" id="+((j+1)*10+(i+1))+">"+" "+"</td>";
-}
-text += "</tr>";
-arr[j] = text;
-console.log(i);
-}
-document.getElementById("back").innerHTML = arr[0];
-for (j = 1; j < fLen; j++){
-$("#back").append(arr[j]);
-}
-
-
-
-
-for (j = 0; j < fLen; j++) {
-for (i = 0; i < fLen; i++) {
-temp = (j+1)*10+(i+1);
-if(i==j){
-$("#"+ temp).css("background-color", "#CD9834");
-} else if(j==2){
-$("#"+ temp).css("background-color", "#3364FB");
-}
-else
- {
-$("#"+ temp).css("background-color", "#08960A");
-}
-
-
-}
-}
-
-
-
-
-}
-
-
-</script>
-
-
-
-
+<script src="myScript.js"></script>
 
 
 
